@@ -8,6 +8,7 @@ from discord.ext import commands
 import datetime
 import os 
 
+TOKEN = os.environ.get('BOT_TOKEN')
 
 client = commands.Bot(command_prefix='!')
 
@@ -119,4 +120,4 @@ async def on_command_error(ctx, error):
     else:
         print(errstr)
 
-client.run('OTUzODI1NDMyOTMzOTA0NDY1.YjKNKA.y-dgPftLoUcTnHYAQmx3NWLOheY')
+client.run(TOKEN)
